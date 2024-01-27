@@ -10,21 +10,27 @@
 <body>
     <div class="weather-app">
     <header>
-        <form>
-            <input type="search" placeholder="Enter a city" required/>
-            <input type="submit" value="search"/>
+        <form class="search-form">
+            <input type="search" placeholder="Enter a city" required class="search-input"/>
+            <input type="submit" value="search" class="search-button"/>
         </form>    
     </header>
     <main>
-        <div>
-        <h1>Paris</h1>
-        <p> Tuesday 14:49, scattered clouds
-            <br />
-            Humidity: 66%, Wind: 3.13km/h
-        </p>
+        <div class="current-weather">
+          <div>
+            <h1 class="current-city" id="current-city">Paris</h1>
+            <p class="current-details">
+              <span id="current-date"></span>Tuesday 14;49, scattered clouds <br />
+              Humidity: <strong>66%</strong>, Wind: <strong>3.13km/h</strong>
+            </p>
+          </div>
+          <div class="current-temperature">
+            <span class="current-temperature-icon">⛅️</span
+            ><span class="current-temperature-value">12</span
+            ><span class="current-temperature-unit">°C</span>
+          </div>
         </div>
-        <div>⛅️ 12°C</div>
-    </main>
+      </main>
     <footer>
         Coded by 
         <a href="https://github.com/vilouspics" target="_blank" class="">Victoria Louise Steinwachs</a>, 
@@ -36,3 +42,5 @@
     </div>
 </body>
 </html>
+
+
