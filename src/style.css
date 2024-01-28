@@ -59,6 +59,7 @@ vmain {
     font-weight: 900;
     margin: 0;
   }
+
 .current-details {
     color: rgba(39, 33, 66, 0.4);
     font-size: 16px;
@@ -71,21 +72,30 @@ vmain {
   }
   
 .current-temperature-icon {
-    position: relative;
-    top: -8px;
-    font-size: 40px;
-    margin-right: 10px;
+    margin-top: 30px;
+    display: inline-block;
+    /* vertical-align: middle; */
+    width: 100px;
+    height: 100px;
   }
+
+#icon {
+    position: relative;
+    display: inline-block;
+    margin-top: -23px;
+}
   
 .current-temperature-value {
     font-size: 80px;
     font-weight: bold;
+    top: -23px;
+    position: relative;
   }
   
 .current-temperature-unit {
     font-size: 28px;
     position: relative;
-    top: -38px;
+    top: -60px;
   }
   
 footer {
