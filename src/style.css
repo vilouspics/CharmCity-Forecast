@@ -12,8 +12,15 @@ header {
     padding-bottom: 30px;
   }
 
-vmain {
+main {
     padding: 30px 0;
+  }
+
+footer {
+    border-top: 1px solid #f9f7fe;
+    text-align: center;
+    padding-top: 15px;
+    color: rgba(39, 33, 66, 0.4);
   }
 
 .weather-app {
@@ -57,7 +64,7 @@ vmain {
 .current-city {
     font-size: 38px;
     font-weight: 900;
-    margin: 0;
+    margin-top: -7px;
   }
 
 .current-details {
@@ -72,18 +79,11 @@ vmain {
   }
   
 .current-temperature-icon {
-    margin-top: 30px;
+    margin-top: 5px;
     display: inline-block;
-    /* vertical-align: middle; */
     width: 100px;
     height: 100px;
   }
-
-#icon {
-    position: relative;
-    display: inline-block;
-    margin-top: -23px;
-}
   
 .current-temperature-value {
     font-size: 80px;
@@ -97,10 +97,15 @@ vmain {
     position: relative;
     top: -60px;
   }
+
+#icon {
+    position: relative;
+    display: inline-block;
+    margin-top: -23px;
+}
+
+.logo {
+    margin-bottom: 30px;
+    max-width: 150px;
+}
   
-footer {
-    border-top: 1px solid #f9f7fe;
-    text-align: center;
-    padding-top: 15px;
-    color: rgba(39, 33, 66, 0.4);
-  }
