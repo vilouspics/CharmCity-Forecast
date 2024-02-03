@@ -30,7 +30,7 @@ function formatDate(date) {
         "Wednesday",
         "Thursday",
         "Friday",
-        "Saturday"
+        "Saturday" 
       ];
       let day = days[date.getDay()];
 
@@ -53,7 +53,28 @@ function handleSearchSubmit(event) {
     searchCity(searchInput.value);
 }
 
+function displayForecast() {
+
+    let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+    let forecastHtml = "";
+
+    days.forEach(function (day) {
+        forecastHtml = forecastHtml + `<div class="grid-item">
+    <div class="forecast-day"><strong>${day}</strong></div>
+    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png" alt="forecast icon"/>
+    <div class="forecast-temperatures">
+        <span class="forecast-temperature-max"><strong>18°</strong> </span><span class="forecast-temperature-min">12°</span>
+    </div>
+    </div>`;
+
+    })
+
+    let forecastElement = document.querySelector("#forecast");
+    forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit)
 
 searchCity("Berlin");
+displayForecast();
