@@ -9,6 +9,7 @@
     <title>PastelMetro Weather App</title>
 </head>
 <body>
+    <div class="container">
     <div class="weather-app">
     <header>
         <img src="src/SheCodesLogoLight.png" class="logo" alt="SheCodes Logo">
@@ -20,7 +21,7 @@
     <main>
         <div class="current-weather">
           <div>
-            <h1 class="current-city" id="current-city"></h1>
+            <h1 class="current-city" id="current-city"><strong>⚑</strong></h1>
             <p class="current-details">
               <span id="day-and-time"></span><span id="description">scattered clouds</span> <br />
             Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind-speed"></strong>
@@ -31,10 +32,10 @@
             <span class="current-temperature-value" id="current-temperature-value"></span
             ><span class="current-temperature-unit">°C</span>
           </div>
-        </div>
+        
         <div class="forecast-container">
             <div class="grid-item">
-                Thu
+                <div class="forecast-day">Thu</div>
                 <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png" alt="forecast icon"/>
                 18 12
             </div>
@@ -58,17 +59,22 @@
                 <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png" alt="forecast icon"/>
                 18 12
             </div>
-        </div>
+    </div>
+</div> 
+</div>
       </main>
-    <footer>
+    <footer class="footer-info">
         Coded by 
         <a href="https://github.com/vilouspics" target="_blank" class="">Victoria Louise Steinwachs</a>, 
         open-sourced on 
         <a href="https://github.com/vilouspics/PastelMetro-Weather-App" target="_blank" class="" >GitHub</a> 
         and hosted on <a href="https://pastelmetro-weather.netlify.app/" target="_blank" class="" >Netlify</a>
+        <p class="footer-info">3D weather icons by <a href="https://www.vecteezy.com/free-vector/3d" target="_blank">Tatyana Pavliuk</a>, background image by <a href="https://www.vecteezy.com/free-vector/7-wonders-of-the-world" target="_blank">Prakasit Khuansuwan</a>, both via <a href="https://www.vecteezy.com/" target="_blank">Vecteezy</a>.</p>
     </footer>
+    
+    
     <script src="src/index.js"></script>
-    </div>
+    </div>  
 </body>
 </html>
 
