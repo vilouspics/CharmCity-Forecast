@@ -78,7 +78,6 @@ main {
     padding: 40px;
     width: 100%;
     max-height: 800px;
-    height: 62%;
 }
 
 .search-input {
@@ -87,6 +86,7 @@ main {
     border: none;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
     font-size: 16px;
+    margin-right: 10px;
     padding: 20px;
     width: 75%;
 }
@@ -99,7 +99,7 @@ main {
     color: #fff;
     cursor: pointer;
     font-size: 16px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     padding: 20px;
     transition: all 235ms ease-in-out;
 }
@@ -168,14 +168,14 @@ main {
 .current-temperature-value {
     font-size: 80px;
     font-weight: bold;
-    top: -25px;
+    top: -34px;
     position: relative;
   }
   
 .current-temperature-unit {
     font-size: 28px;
     position: relative;
-    top: -62px;
+    top: -70px;
   }
 
 #icon {
@@ -196,7 +196,6 @@ main {
     margin-bottom: 20px;
 }
 
-
 .grid-item {
     text-align: center;
     font-size: 14px;
@@ -205,24 +204,46 @@ main {
 
 .forecast-temperature-max strong {
     color: #f65282;
+    margin-right: 5px;
 }
 
 .forecast-icon {
     width: 70%;
 }
 
-@media only screen and (max-width: 600px) {
-    
-    .forecast-container {
-      grid-template-columns: 1fr; 
-    }
+@media only screen and (max-width: 600px) {    
   
-    .grid-item {
-      margin-bottom: 15px; 
-    }
-  
-    .forecast-icon {
-      width: 100%; 
-    }
-  
+  .current-details {
+    margin-bottom: 0;
   }
+
+  .current-temperature {
+    margin-bottom: 0;
+    margin: -30px auto 0;
+  }
+
+  .forecast-container {
+    grid-template-columns: 1fr; 
+    margin: 0 auto;
+  }
+
+  .forecast-icon {
+    width: 50%; 
+  }
+
+  .grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .search-input {
+    margin-bottom: 10px;
+  }
+  
+  .weather-app {
+    max-height: none;
+    margin-bottom: 50px;
+  }
+
+}

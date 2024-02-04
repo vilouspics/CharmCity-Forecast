@@ -8,9 +8,8 @@ function refreshWeather(response) {
     let dayTimeElement = document.querySelector("#day-and-time");
     let date = new Date(response.data.time * 1000);
     let iconElement = document.querySelector("#icon");
+    
    
-
-console.log("Weather Icon from API:", response.data.condition.icon);
 
     iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" alt="weather icon" class="current-temperature-icon"></img>`
     cityElement.innerHTML = response.data.city;
@@ -26,9 +25,9 @@ console.log("Weather Icon from API:", response.data.condition.icon);
         let container = document.querySelector(".weather-app");
     
         if (temperature < 0) {
-            container.style.backgroundColor = "var(--color-quinary)";
-        } else if (temperature >= 0 && temperature < 15) {
             container.style.backgroundColor = "var(--color-secondary)";
+        } else if (temperature >= 0 && temperature < 15) {
+            container.style.backgroundColor = "var(--color-quinary)";
         } else {
             container.style.backgroundColor = "var(--color-primary)";
         }
@@ -97,7 +96,7 @@ function displayForecast(response) {
     <div class="forecast-day"><strong>${formatDay(day.time)}</strong></div>
     <img src="${day.condition.icon_url}" alt="forecast icon" class="forecast-icon"/>
     <div class="forecast-temperatures">
-        <span class="forecast-temperature-max"><strong>${Math.round(day.temperature.maximum)}°</strong> </span><span class="forecast-temperature-min">${Math.round(day.temperature.minimum)}°</span>
+        <span class="forecast-temperature-max"><strong>${Math.round(day.temperature.maximum)}° </strong> </span><span class="forecast-temperature-min"> ${Math.round(day.temperature.minimum)}°</span>
     </div>
     </div>`;
     }
