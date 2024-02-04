@@ -26,10 +26,14 @@ function refreshWeather(response) {
     
         if (temperature < 0) {
             container.style.backgroundColor = "var(--color-secondary)";
-        } else if (temperature >= 0 && temperature < 15) {
+        } else if (temperature >= 0 && temperature < 10) {
+            container.style.backgroundColor = "var(--color-tertiary)";
+        } else if (temperature >= 11 && temperature < 20) {
             container.style.backgroundColor = "var(--color-quinary)";
-        } else {
+        } else if (temperature > 20) {
             container.style.backgroundColor = "var(--color-primary)";
+        } else {
+            container.style.backgroundColor = "var(--color-quaternary)";
         }
     }
 
